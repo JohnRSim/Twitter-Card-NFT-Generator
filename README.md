@@ -10,4 +10,4 @@ https://nfthack2022.netlify.app/social
 
 
 ## Example of Opensea with Custom 3D Player
-<img src="./images/socialCard_opensea.PNG" alt="OpenSea Interactive 3D NFT" />
+<img src="./images/socialCard.PNG" alt="OpenSea Interactive 3D NFT" />

@@ -20,9 +20,9 @@ Here we point to our player and pass in additional params to generate the 3D ass
 &lt;meta name="twitter:player:height" content="480"&gt;<br />
 &lt;meta name="twitter:image" &gt;<br />
 
-## Example of Opensea Static Card
+## Example of OpenSea Static Card
 <img src="./images/socialCard_opensea.PNG" alt="OpenSea Static 3D Image of NFT" />
 
 
-## Example of Opensea with Custom 3D Player
+## Example of OpenSea with Custom 3D Player
 <img src="./images/socialCard.PNG" alt="OpenSea Interactive 3D NFT" />

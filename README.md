@@ -9,11 +9,11 @@ https://nfthack2022.netlify.app/social
 Can be found in /player folder.
 
 # Twitter social code example
-&lt;meta name="twitter:card" content="player"&gt;
-&lt;meta name="twitter:player" content="https://nfthack2022.netlify.app/player/3DViewer.html?src={opensea3DAsset}&poster={openseaPoster}&alt={openseaAlt}"&gt;
-&lt;meta name="twitter:player:width" content="480"&gt;
-&lt;meta name="twitter:player:height" content="480"&gt;
-&lt;meta name="twitter:image" &gt;
+&lt;meta name="twitter:card" content="player"&gt;<br />
+&lt;meta name="twitter:player" content="https://nfthack2022.netlify.app/player/3DViewer.html?src={opensea3DAsset}&poster={openseaPoster}&alt={openseaAlt}"&gt;<br />
+&lt;meta name="twitter:player:width" content="480"&gt;<br />
+&lt;meta name="twitter:player:height" content="480"&gt;<br />
+&lt;meta name="twitter:image" &gt;<br />
 
 ## Example of Opensea Static Card
 <img src="./images/socialCard_opensea.PNG" alt="OpenSea Static 3D Image of NFT" />

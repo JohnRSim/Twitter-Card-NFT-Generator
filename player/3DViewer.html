@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+	<meta charset="utf-8">
+	<title>Demo 3D Player</title>
+
+	<meta name="viewport" content="width=device-width, initial-scale=1" />
+	<meta name="color-scheme" content="dark light">
+
+	<script type="module" src="https://unpkg.com/@google/model-viewer/dist/model-viewer.min.js"></script>
+
+
+	<style>
+		html {
+			height: 100%;
+		}
+
+		body {
+			height: 100%;
+			margin: 0;
+		}
+
+		model-viewer {
+			display: block;
+			width: 100%;
+			height: 100%;
+			--poster-color: #fff0;
+		}
+
+		model-viewer::part(default-progress-mask) {
+			display: none;
+		}
+
+		model-viewer::part(default-progress-bar) {
+			background-color: rgba(127, 127, 127, 0.8);
+		}
+
+		/* This keeps child nodes hidden while the element loads */
+		:not(:defined) {
+			display: none;
+		}
+	</style>
+</head>
+
+<body>
+	<model-viewer 
+		id="player" 
+		seamless-poster 
+		environment-image="neutral" 
+		shadow-intensity="1" 
+		autoplay
+		ar-modes="webxr scene-viewer quick-look" 
+		camera-controls 
+		auto-rotate 
+		interaction-prompt-threshold="1500">
+
+		<script type="module">
+			//Target modelviewer component that will display GLB asset
+			const modelViewer = document.querySelector('#player');
+
+			//Grab params passed in addrss bar
+			const queryParams = window.location.search.substring(1).split('&');
+
+			//loop params and apply to viewer
+			for (const param of queryParams) {
+				const keyVal = param.split('=');
+				const key = keyVal[0];
+				const val = decodeURIComponent(keyVal[1].replace(/\+/g, ' '));
+
+				if (key === 'style') {
+					modelViewer.style.cssText = val;
+				} else {
+					const num = Number(val);
+					modelViewer[key] = isFinite(num) ? num : val;
+				}
+			}
+
+			// Work-around for a bug
+			modelViewer.ar = true;
+		</script>
+</body>
+</html>
